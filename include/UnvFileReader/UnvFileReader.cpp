@@ -174,8 +174,7 @@ namespace UnvFileReader {
             std::getline(fileStream, line);
             if (isSeparator(line)) return;
 
-            int groupNumber, numberOfCells;
-            groupNumber = std::stoi(line.substr(0, 10));
+            int numberOfCells;
             numberOfCells = std::stoi(line.substr(70, 10));
 
             std::getline(fileStream, line);
