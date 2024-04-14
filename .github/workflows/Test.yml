@@ -40,6 +40,8 @@ jobs:
           cd build
           ctest --build-config Debug
 
-      - name: Code coverage Ubuntu
-        if: startsWith(matrix.os, 'ubuntu')
-        run: bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: JanBrekelmans/UnvFileReader
