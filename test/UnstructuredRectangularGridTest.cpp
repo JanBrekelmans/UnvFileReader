@@ -25,8 +25,8 @@ TEST_CASE("Unstructured Rectangular grid test") {
     CHECK(176 + 4 * 10 == cells.size());  // 176 interior cells, and 4 times 10 boundary cells
 
     // Number of interior and boundary cells
-    auto numInteriorCells = std::ranges::count_if(cells.begin(), cells.end(), [](auto p) { return p.second.nodes.size() == 3; });
-    auto numBoundaryCells = std::ranges::count_if(cells.begin(), cells.end(), [](auto p) { return p.second.nodes.size() == 2; });
+    auto numInteriorCells = std::count_if(cells.begin(), cells.end(), [](auto p) { return p.second.nodes.size() == 3; });
+    auto numBoundaryCells = std::count_if(cells.begin(), cells.end(), [](auto p) { return p.second.nodes.size() == 2; });
     CHECK(176 == numInteriorCells);
     CHECK(4 * 10 == numBoundaryCells);
 

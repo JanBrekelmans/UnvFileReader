@@ -25,8 +25,8 @@ TEST_CASE("Structured Rectangular grid test") {
     CHECK(10 * 10 + 4 * 10 == cells.size());  // 100 interior cells, and 4 times 10 boundary cells
 
     // Number of interior and boundary cells
-    auto numInteriorCells = std::ranges::count_if(cells.begin(), cells.end(), [](auto p) { return p.second.nodes.size() == 4; });
-    auto numBoundaryCells = std::ranges::count_if(cells.begin(), cells.end(), [](auto p) { return p.second.nodes.size() == 2; });
+    auto numInteriorCells = std::count_if(cells.begin(), cells.end(), [](auto p) { return p.second.nodes.size() == 4; });
+    auto numBoundaryCells = std::count_if(cells.begin(), cells.end(), [](auto p) { return p.second.nodes.size() == 2; });
     CHECK(10 * 10 == numInteriorCells);
     CHECK(4 * 10 == numBoundaryCells);
 

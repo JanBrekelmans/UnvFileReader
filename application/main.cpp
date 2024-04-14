@@ -4,7 +4,7 @@
 #include <UnvFileReader/UnvFileReader.h>
 
 int main() {
-    const std::filesystem::path path("./test/files/RectangularGrid.unv");
+    const std::filesystem::path path("./test/files/Unstructured/RectangularGrid.unv");
 
     try {
         auto unvFileStructure = UnvFileReader::UnvFileReader::readUnvFile(path);
