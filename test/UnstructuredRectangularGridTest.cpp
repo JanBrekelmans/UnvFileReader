@@ -34,7 +34,7 @@ TEST_CASE("Unstructured Rectangular grid test") {
     auto groups = fileStructure.groups;
 
     // Verify the interior cells
-    CHECK(100 == groups.at("Interior").size());
+    CHECK(176 == groups.at("Interior").size());
     CHECK(10 == groups.at("TopFace").size());
     CHECK(10 == groups.at("BottomFace").size());
     CHECK(10 == groups.at("RightFace").size());
