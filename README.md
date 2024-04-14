@@ -7,4 +7,5 @@ UnvFileReader is a C++20 library for reading the Ideas-UNV mesh format.
 
 # Getting Started
 ## Using CMake
-
+This library can be easily added using CMake. An example shown below uses [CPM](https://github.com/cpm-cmake/CPM.cmake).
+![image](https://github.com/JanBrekelmans/UnvFileReader/assets/45168298/fc039540-aa08-492d-a984-d83f414c854b)
