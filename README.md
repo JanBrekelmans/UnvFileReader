@@ -4,3 +4,7 @@
 [![codecov](https://codecov.io/gh/JanBrekelmans/UnvFileReader/graph/badge.svg?token=F30MMNG9UB)](https://codecov.io/gh/JanBrekelmans/UnvFileReader)
 # UnvFileReader
 UnvFileReader is a C++20 library for reading the Ideas-UNV mesh format.
+
+# Getting Started
+## Using CMake
+
