@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14...3.22)
+cmake_minimum_required(VERSION 3.21...3.29)
 
 project(
     UnvFileReader
@@ -42,10 +42,12 @@ else()
   target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -Wpedantic -Werror)
 endif()
 
-# ---- Add the main executable ----
-add_executable(main ${CMAKE_CURRENT_SOURCE_DIR}/application/main.cpp)
-target_link_libraries(main ${PROJECT_NAME})
-set_property(TARGET main PROPERTY CXX_STANDARD 20 WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
+if(PROJECT_IS_TOP_LEVEL)
+    # ---- Add the main executable ----
+    add_executable(main ${CMAKE_CURRENT_SOURCE_DIR}/application/main.cpp)
+    target_link_libraries(main ${PROJECT_NAME})
+    set_property(TARGET main PROPERTY CXX_STANDARD 20 WORKING_DIRECTORY ${PROJECT_SOURCE_DIR})
+endif()
 
 # ---- Add testing ----
 set(TEST_PROJECT_NAME ${PROJECT_NAME}Test)
