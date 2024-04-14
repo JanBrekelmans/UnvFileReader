@@ -58,8 +58,6 @@ namespace UnvFileReader {
         void readUnvCells(std::ifstream& fileStream, std::unordered_map<int, UnvCell>& unvCells);
         void readUnvGroups(std::ifstream& fileStream, std::unordered_map<int, UnvCell>& unvCells, std::unordered_map<std::string, std::vector<int>>& groups);
 
-        std::ifstream fileStream;
-
         inline static const std::string SEPARATOR{"    -1"};
     };
 }  // namespace UnvFileReader

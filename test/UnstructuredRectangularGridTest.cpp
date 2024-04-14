@@ -44,7 +44,7 @@ TEST_CASE("Unstructured Rectangular grid test") {
 
     for (const auto& groupName : groupNames) {
         const auto& group = groups.at(groupName);
-        std::ranges::for_each(group.begin(), group.end(), [&](auto cellIndex) {
+        std::for_each(group.begin(), group.end(), [&](auto cellIndex) {
             auto& cell = cells[cellIndex];
             CHECK(groupName == cell.groupName);
         });

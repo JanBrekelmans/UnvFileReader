@@ -36,6 +36,12 @@ target_link_libraries(${PROJECT_NAME})
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 20)
 
+if(MSVC)
+  target_compile_options(${PROJECT_NAME} PRIVATE /W4 /WX)
+else()
+  target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -Wpedantic -Werror)
+endif()
+
 # ---- Add the main executable ----
 add_executable(main ${CMAKE_CURRENT_SOURCE_DIR}/application/main.cpp)
 target_link_libraries(main ${PROJECT_NAME})

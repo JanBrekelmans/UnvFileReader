@@ -25,6 +25,7 @@ namespace UnvFileReader {
     UnvFileStructure UnvFileReader::readUnvFile(const std::filesystem::path& path) { return UnvFileReader{}.readUnvFileImpl(path); }
 
     UnvFileStructure UnvFileReader::readUnvFileImpl(const std::filesystem::path& path) {
+        std::ifstream fileStream;
         fileStream.open(path, std::ios_base::in);
 
         if (!fileStream.good()) {
