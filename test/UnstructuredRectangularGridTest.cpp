@@ -5,7 +5,7 @@
 #include <algorithm>
 
 TEST_CASE("Unstructured Rectangular grid test") {
-    const std::filesystem::path path("./test/files/Structured/RectangularGrid.unv");
+    const std::filesystem::path path("D:\\Git\\UnvFileReader\\test\\files\\Unstructured\\RectangularGrid.unv");
     auto fileStructure = UnvFileReader::UnvFileReader::readUnvFile(path);
 
     // Verify the units
